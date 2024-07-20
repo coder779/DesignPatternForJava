@@ -1,0 +1,4 @@
+/bin/Imp/*.class
+/bin/designImp/Adapter/*.class
+/bin/designImp/Bridge/*.class
+/bin/designImp/Observer/*.class
