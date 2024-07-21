@@ -1,4 +1,4 @@
-package designImp.Observer;
+package DesignImpl.Observer;
 
 public class OctalObserver extends Observer {
 

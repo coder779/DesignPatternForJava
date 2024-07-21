@@ -1,4 +1,4 @@
-package designImp.Adapter;
+package DesignImpl.Adapter;
 
 public class Mp4Player implements AdvancedMediaPlayer {
 

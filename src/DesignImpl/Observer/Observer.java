@@ -1,4 +1,4 @@
-package designImp.Observer;
+package DesignImpl.Observer;
 
 public abstract class Observer {
 	protected Subject subject;

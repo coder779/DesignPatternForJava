@@ -1,4 +1,4 @@
-package designImp.Adapter;
+package DesignImpl.Adapter;
 
 public class VlcPlayer implements AdvancedMediaPlayer {
 	@Override

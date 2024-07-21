@@ -1,4 +1,4 @@
-package designImp.Adapter;
+package DesignImpl.Adapter;
 
 public interface AdvancedMediaPlayer {
 	public void playVlc(String fileName);

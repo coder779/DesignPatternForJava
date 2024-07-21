@@ -1,6 +1,6 @@
-package designImp.Bridge;
+package DesignImpl.Bridge;
 
-public class Circle extends Shape {
+public class Circle extends Shape2 {
 	private int x, y, radius;
 
 	public Circle(int x, int y, int radius, DrawAPI drawAPI) {
