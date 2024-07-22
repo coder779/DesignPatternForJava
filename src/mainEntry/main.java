@@ -10,6 +10,7 @@ public class main {
 		method.CallAbstractFactory(true);
 		method.callBridgePattern(true);
 		method.callObserverPattern(true);
+		method.callCriteriaPattern(true);
 		
 	}
 

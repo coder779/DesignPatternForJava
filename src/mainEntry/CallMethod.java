@@ -1,9 +1,14 @@
 package mainEntry;
 
 import DesignImpl.stratrgyPattern.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import DesignImpl.Adapter.*;
 import DesignImpl.Bridge.*;
 import DesignImpl.Bridge.Circle;
+import DesignImpl.FilterPattern.*;
 import DesignImpl.Observer.*;
 import DesignImpl.abstractFactoryPattern.*;
 
@@ -102,6 +107,38 @@ public class CallMethod {
 			subject.setState(15);
 			System.out.println("Second state change: 10");
 			subject.setState(10);
+		}
+	}
+	
+	public void callCriteriaPattern(boolean isShow) {
+		if (isShow) {
+
+			List<Person> persons = new ArrayList<Person>();
+
+			persons.add(new Person("Robert", "Male", "Single"));
+			persons.add(new Person("John", "Male", "Married"));
+			persons.add(new Person("Laura", "Female", "Married"));
+			persons.add(new Person("Diana", "Female", "Single"));
+			persons.add(new Person("Mike", "Male", "Single"));
+			persons.add(new Person("Bobby", "Male", "Single"));
+
+			Criteria male = new CriteriaMale();
+			Criteria female = new CriteriaFemale();
+			Criteria single = new CriteriaSingle();
+			Criteria singleMale = new AndCriteria(single, male);
+			Criteria singleOrFemale = new OrCriteria(single, female);
+
+		      System.out.println("Males: ");
+		      UtilForFilter.printPersons(male.meetCriteria(persons));
+		 
+		      System.out.println("\nFemales: ");
+		      UtilForFilter.printPersons(female.meetCriteria(persons));
+		 
+		      System.out.println("\nSingle Males: ");
+		      UtilForFilter.printPersons(singleMale.meetCriteria(persons));
+		 
+		      System.out.println("\nSingle Or Females: ");
+		      UtilForFilter.printPersons(singleOrFemale.meetCriteria(persons));
 		}
 	}
 }
